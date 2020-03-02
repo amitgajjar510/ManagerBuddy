@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class URLConstants {
+
+    // MARK: - Constant Strings
+
+    static let fetchEmployees: String = "http://dummy.restapiexample.com/api/v1/employees"
+}
