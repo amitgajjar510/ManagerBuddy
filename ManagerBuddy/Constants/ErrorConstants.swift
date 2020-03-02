@@ -12,6 +12,7 @@ class ErrorConstants {
 
     // MARK: - Constant Strings
 
-    static var urlMismatched: String = "URL is not correct"
-    static var tryAgain: String = "Something went wrong! Please try again!"
+    static let urlMismatched: String = "URL is not correct"
+    static let tryAgain: String = "Something went wrong! Please try again!"
+    static let responseMismatched: String = "JSON Response is not in correct form"
 }

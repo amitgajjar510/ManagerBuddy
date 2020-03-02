@@ -19,8 +19,18 @@ class EmployeeWebServiceManager: WebServiceManager {
     // MARK: - Parent class implementation methods
 
     override func parseData(withData data: Data) {
-        if let jsonString = String(data: data, encoding: .utf8) {
-           print(jsonString)
+        do {
+            guard let jsonResponseDictionary = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves) as? [String: Any], let employeesResponseArray = jsonResponseDictionary["data"] as? [[String: Any]]
+                else {
+                    parseError(withString: ErrorConstants.responseMismatched)
+                    return
+            }
+            let employeesData: Data = try JSONSerialization.data(withJSONObject: employeesResponseArray, options: .prettyPrinted)
+            let employees = try JSONDecoder().decode([Employee] .self, from: employeesData)
+            print(employees)
+        }
+        catch let error {
+            parseError(withString: error.localizedDescription)
         }
     }
 
