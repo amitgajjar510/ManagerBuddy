@@ -22,6 +22,7 @@
 		7BED1077240D5CD800F8CEFB /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED1076240D5CD800F8CEFB /* URLConstants.swift */; };
 		7BED1079240D612100F8CEFB /* EmployeeWebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED1078240D612100F8CEFB /* EmployeeWebServiceManager.swift */; };
 		7BED107B240D66F600F8CEFB /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED107A240D66F600F8CEFB /* Employee.swift */; };
+		7BED107D240D7D9900F8CEFB /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED107C240D7D9900F8CEFB /* EmployeeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		7BED1076240D5CD800F8CEFB /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		7BED1078240D612100F8CEFB /* EmployeeWebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeWebServiceManager.swift; sourceTree = "<group>"; };
 		7BED107A240D66F600F8CEFB /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		7BED107C240D7D9900F8CEFB /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		7BED1068240D53FB00F8CEFB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7BED107C240D7D9900F8CEFB /* EmployeeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				7BED1073240D5CB200F8CEFB /* StringConstants.swift in Sources */,
 				7BED103F240C2EFB00F8CEFB /* ManagerBuddy.xcdatamodeld in Sources */,
 				7BED1077240D5CD800F8CEFB /* URLConstants.swift in Sources */,
+				7BED107D240D7D9900F8CEFB /* EmployeeViewModel.swift in Sources */,
 				7BED1035240C2EFB00F8CEFB /* AppDelegate.swift in Sources */,
 				7BED1037240C2EFB00F8CEFB /* SceneDelegate.swift in Sources */,
 			);
