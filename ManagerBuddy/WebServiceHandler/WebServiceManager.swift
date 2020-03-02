@@ -8,6 +8,12 @@
 
 import Foundation
 
+// MARK: - WebServiceManagerDelegate Protocol Definition
+protocol WebServiceManagerDelegate: class {
+    func responseReceived(asObject object: Any)
+    func errorReceived(withString errorString: String)
+}
+
 // MARK: - URLMethods Enum
 enum URLMethod {
     case Get
@@ -17,6 +23,10 @@ enum URLMethod {
 }
 
 class WebServiceManager {
+
+    // MARK: - Properties
+
+    weak var delegate: WebServiceManagerDelegate?
 
     // MARK: - WebServiceManager Basic Methods
 

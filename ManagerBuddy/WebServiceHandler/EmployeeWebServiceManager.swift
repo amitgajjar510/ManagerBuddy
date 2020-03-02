@@ -27,7 +27,7 @@ class EmployeeWebServiceManager: WebServiceManager {
             }
             let employeesData: Data = try JSONSerialization.data(withJSONObject: employeesResponseArray, options: .prettyPrinted)
             let employees = try JSONDecoder().decode([Employee] .self, from: employeesData)
-            print(employees)
+            delegate?.responseReceived(asObject: employees)
         }
         catch let error {
             parseError(withString: error.localizedDescription)
@@ -35,6 +35,6 @@ class EmployeeWebServiceManager: WebServiceManager {
     }
 
     override func parseError(withString errorString: String) {
-        print(errorString)
+        delegate?.errorReceived(withString: errorString)
     }
 }
