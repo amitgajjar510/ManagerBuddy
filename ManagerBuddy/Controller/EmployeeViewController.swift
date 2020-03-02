@@ -69,6 +69,15 @@ extension EmployeeViewController: EmployeeViewModelDelegate {
             self?.employeeTableView.reloadData()
         }
     }
+
+    func error(withMessage message: String) {
+        let alertController: UIAlertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        let alertAction: UIAlertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        DispatchQueue.main.async { [weak self] in
+            self?.present(alertController, animated: true, completion: nil)
+        }
+    }
 }
 
 extension EmployeeViewController: UITableViewDataSource, UITableViewDelegate {

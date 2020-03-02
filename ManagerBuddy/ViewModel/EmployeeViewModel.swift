@@ -10,6 +10,7 @@ import Foundation
 
 protocol EmployeeViewModelDelegate: class {
     func refreshEmployees()
+    func error(withMessage message: String)
 }
 
 enum SortBy: String, CaseIterable {
@@ -110,6 +111,7 @@ extension EmployeeViewModel: WebServiceManagerDelegate {
 
     func errorReceived(withString errorString: String) {
         print(errorString)
+        delegate?.error(withMessage: errorString)
         delegate?.refreshEmployees()
     }
 }
