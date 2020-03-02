@@ -8,26 +8,44 @@
 
 import Foundation
 
+protocol EmployeeViewModelDelegate: class {
+    func refreshEmployees()
+}
+
 class EmployeeViewModel {
 
     // MARK: - Properties
     var employeeEntities: [EmployeeEntity] = []
     private let databaseManager: DatabaseManager = DatabaseManager.shared
     private lazy var employeeWebServiceManager: EmployeeWebServiceManager = EmployeeWebServiceManager()
+    weak var delegate: EmployeeViewModelDelegate?
 
     func showEmployees() {
-        // Get employees from Database first
-        employeeEntities = databaseManager.retriveEmployees()
-        // Call WebService Request
-        fetchEmployees()
+        if employeeEntities.count == 0 {
+            // Get employees from Database first
+            employeeEntities = databaseManager.retriveEmployees()
+            // Call WebService Request
+            fetchEmployees()
+        }
     }
 }
 
 extension EmployeeViewModel {
 
+    // MARK: - Database Methods
+
     func updateEmployeesAfterAPICall(withEmployees employees: [Employee]) {
         databaseManager.cleanUpEmployees()
         databaseManager.storeEmployees(withEmployees: employees)
+        employeeEntities = databaseManager.retriveEmployees()
+        delegate?.refreshEmployees()
+    }
+
+    func deleteEmployee(atIndex index: Int) {
+        let employeeEntity: EmployeeEntity = employeeEntities[index]
+        databaseManager.deleteEmployee(employeeEntity: employeeEntity)
+        employeeEntities = databaseManager.retriveEmployees()
+        delegate?.refreshEmployees()
     }
 }
 
@@ -53,5 +71,6 @@ extension EmployeeViewModel: WebServiceManagerDelegate {
 
     func errorReceived(withString errorString: String) {
         print(errorString)
+        delegate?.refreshEmployees()
     }
 }

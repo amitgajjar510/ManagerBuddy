@@ -25,6 +25,10 @@
 		7BED107D240D7D9900F8CEFB /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED107C240D7D9900F8CEFB /* EmployeeViewModel.swift */; };
 		7BED1080240D8A4C00F8CEFB /* EmployeeEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED107E240D8A4C00F8CEFB /* EmployeeEntity+CoreDataClass.swift */; };
 		7BED1081240D8A4C00F8CEFB /* EmployeeEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED107F240D8A4C00F8CEFB /* EmployeeEntity+CoreDataProperties.swift */; };
+		7BED1083240D92D100F8CEFB /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED1082240D92D100F8CEFB /* EmployeeViewController.swift */; };
+		7BED1086240D95D200F8CEFB /* EmployeeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED1084240D95D200F8CEFB /* EmployeeTableCell.swift */; };
+		7BED1087240D95D200F8CEFB /* EmployeeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BED1085240D95D200F8CEFB /* EmployeeTableCell.xib */; };
+		7BED1089240D9C5A00F8CEFB /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED1088240D9C5A00F8CEFB /* EmployeeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		7BED107C240D7D9900F8CEFB /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
 		7BED107E240D8A4C00F8CEFB /* EmployeeEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmployeeEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7BED107F240D8A4C00F8CEFB /* EmployeeEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmployeeEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7BED1082240D92D100F8CEFB /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
+		7BED1084240D95D200F8CEFB /* EmployeeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableCell.swift; sourceTree = "<group>"; };
+		7BED1085240D95D200F8CEFB /* EmployeeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeTableCell.xib; sourceTree = "<group>"; };
+		7BED1088240D9C5A00F8CEFB /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +181,10 @@
 		7BED1069240D541E00F8CEFB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7BED1082240D92D100F8CEFB /* EmployeeViewController.swift */,
+				7BED1084240D95D200F8CEFB /* EmployeeTableCell.swift */,
+				7BED1085240D95D200F8CEFB /* EmployeeTableCell.xib */,
+				7BED1088240D9C5A00F8CEFB /* EmployeeDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,6 +332,7 @@
 			files = (
 				7BED1044240C2EFE00F8CEFB /* LaunchScreen.storyboard in Resources */,
 				7BED1041240C2EFE00F8CEFB /* Assets.xcassets in Resources */,
+				7BED1087240D95D200F8CEFB /* EmployeeTableCell.xib in Resources */,
 				7BED103C240C2EFB00F8CEFB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,13 +363,16 @@
 				7BED1075240D5CC100F8CEFB /* ErrorConstants.swift in Sources */,
 				7BED107B240D66F600F8CEFB /* Employee.swift in Sources */,
 				7BED1079240D612100F8CEFB /* EmployeeWebServiceManager.swift in Sources */,
+				7BED1086240D95D200F8CEFB /* EmployeeTableCell.swift in Sources */,
 				7BED1073240D5CB200F8CEFB /* StringConstants.swift in Sources */,
 				7BED1080240D8A4C00F8CEFB /* EmployeeEntity+CoreDataClass.swift in Sources */,
 				7BED103F240C2EFB00F8CEFB /* ManagerBuddy.xcdatamodeld in Sources */,
 				7BED1077240D5CD800F8CEFB /* URLConstants.swift in Sources */,
 				7BED107D240D7D9900F8CEFB /* EmployeeViewModel.swift in Sources */,
+				7BED1089240D9C5A00F8CEFB /* EmployeeDetailViewController.swift in Sources */,
 				7BED1035240C2EFB00F8CEFB /* AppDelegate.swift in Sources */,
 				7BED1081240D8A4C00F8CEFB /* EmployeeEntity+CoreDataProperties.swift in Sources */,
+				7BED1083240D92D100F8CEFB /* EmployeeViewController.swift in Sources */,
 				7BED1037240C2EFB00F8CEFB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

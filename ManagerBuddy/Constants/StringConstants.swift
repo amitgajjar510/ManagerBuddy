@@ -13,4 +13,9 @@ class StringConstants {
     // MARK: - Constant Strings
 
     static let empty: String = ""
+
+    // MARK: - Screen Titles
+    enum ScreenTitles: String {
+        case Employee = "Employee"
+    }
 }
