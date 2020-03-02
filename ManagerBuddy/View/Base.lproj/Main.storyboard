@@ -35,7 +35,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jH6-fL-9Ya"/>
+                    <navigationItem key="navigationItem" id="jH6-fL-9Ya">
+                        <barButtonItem key="rightBarButtonItem" title="Sort By" id="G33-yR-q1F">
+                            <connections>
+                                <action selector="sortByButtonClicked:" destination="BYZ-38-t0r" id="xId-wp-Tit"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="employeeTableView" destination="Qiq-TZ-76x" id="ZE4-ek-4aD"/>
                     </connections>

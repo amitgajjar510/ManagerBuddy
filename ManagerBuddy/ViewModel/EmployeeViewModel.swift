@@ -12,6 +12,13 @@ protocol EmployeeViewModelDelegate: class {
     func refreshEmployees()
 }
 
+enum SortBy: String, CaseIterable {
+    case SortByNameAscending = "Name: Ascending"
+    case SortByNameDescending = "Name: Descending"
+    case SortByAgeAscending = "Age: Ascending"
+    case SortByAgeDescending = "Age: Descending"
+}
+
 class EmployeeViewModel {
 
     // MARK: - Properties
@@ -20,6 +27,8 @@ class EmployeeViewModel {
     private lazy var employeeWebServiceManager: EmployeeWebServiceManager = EmployeeWebServiceManager()
     weak var delegate: EmployeeViewModelDelegate?
 
+    // MARK: - Public Methods
+
     func showEmployees() {
         if employeeEntities.count == 0 {
             // Get employees from Database first
@@ -27,6 +36,36 @@ class EmployeeViewModel {
             // Call WebService Request
             fetchEmployees()
         }
+    }
+
+    func sortEmployee(sortBy: SortBy) {
+        switch sortBy {
+        case .SortByNameAscending:
+            employeeEntities.sort { (employeeEntityOne, employeeEntityTwo) -> Bool in
+                let employeeEntityOneName: String = employeeEntityOne.name ?? StringConstants.empty
+                let employeeEntityTwoName: String = employeeEntityTwo.name ?? StringConstants.empty
+                return employeeEntityOneName < employeeEntityTwoName
+            }
+        case .SortByNameDescending:
+            employeeEntities.sort { (employeeEntityOne, employeeEntityTwo) -> Bool in
+                let employeeEntityOneName: String = employeeEntityOne.name ?? StringConstants.empty
+                let employeeEntityTwoName: String = employeeEntityTwo.name ?? StringConstants.empty
+                return employeeEntityOneName > employeeEntityTwoName
+            }
+        case .SortByAgeAscending:
+            employeeEntities.sort { (employeeEntityOne, employeeEntityTwo) -> Bool in
+                let employeeEntityOneAge: String = employeeEntityOne.age ?? StringConstants.empty
+                let employeeEntityTwoAge: String = employeeEntityTwo.age ?? StringConstants.empty
+                return employeeEntityOneAge < employeeEntityTwoAge
+            }
+        case .SortByAgeDescending:
+            employeeEntities.sort { (employeeEntityOne, employeeEntityTwo) -> Bool in
+                let employeeEntityOneAge: String = employeeEntityOne.age ?? StringConstants.empty
+                let employeeEntityTwoAge: String = employeeEntityTwo.age ?? StringConstants.empty
+                return employeeEntityOneAge > employeeEntityTwoAge
+            }
+        }
+        delegate?.refreshEmployees()
     }
 }
 

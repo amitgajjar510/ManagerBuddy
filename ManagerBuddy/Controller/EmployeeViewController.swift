@@ -27,6 +27,11 @@ class EmployeeViewController: UIViewController {
         employeeViewModel.showEmployees()
     }
 
+    // MARK: - Action Methods
+    @IBAction func sortByButtonClicked(_ sender: UIBarButtonItem) {
+        openSortByAlertController()
+    }
+
     // MARK: - Private Methods
 
     private func initializeView() {
@@ -35,6 +40,21 @@ class EmployeeViewController: UIViewController {
         employeeTableView.register(UINib(nibName: "EmployeeTableCell", bundle: nil), forCellReuseIdentifier: "EmployeeTableCell")
 
         employeeViewModel.delegate = self
+    }
+
+    private func openSortByAlertController() {
+        let alertController: UIAlertController = UIAlertController(title: "Sort By", message: nil, preferredStyle: .actionSheet)
+        SortBy.allCases.forEach { [weak self] (sortBy) in
+            let alertAction: UIAlertAction = UIAlertAction(title: sortBy.rawValue, style: .default) { (alertAction) in
+                self?.employeeViewModel.sortEmployee(sortBy: sortBy)
+            }
+            alertController.addAction(alertAction)
+        }
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(cancelAction)
+        DispatchQueue.main.async { [weak self] in
+            self?.present(alertController, animated: true, completion: nil)
+        }
     }
 }
 
