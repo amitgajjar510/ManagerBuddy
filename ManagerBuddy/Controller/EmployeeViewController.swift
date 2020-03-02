@@ -52,6 +52,8 @@ class EmployeeViewController: UIViewController {
         }
         let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel)
         alertController.addAction(cancelAction)
+        alertController.popoverPresentationController?.sourceView = navigationController?.navigationBar
+        alertController.popoverPresentationController?.sourceRect = navigationController?.navigationBar.bounds ?? CGRect.zero
         DispatchQueue.main.async { [weak self] in
             self?.present(alertController, animated: true, completion: nil)
         }
