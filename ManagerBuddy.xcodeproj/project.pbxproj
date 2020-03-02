@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7BED1035240C2EFB00F8CEFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED1034240C2EFB00F8CEFB /* AppDelegate.swift */; };
 		7BED1037240C2EFB00F8CEFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED1036240C2EFB00F8CEFB /* SceneDelegate.swift */; };
-		7BED1039240C2EFB00F8CEFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED1038240C2EFB00F8CEFB /* ViewController.swift */; };
 		7BED103C240C2EFB00F8CEFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BED103A240C2EFB00F8CEFB /* Main.storyboard */; };
 		7BED103F240C2EFB00F8CEFB /* ManagerBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BED103D240C2EFB00F8CEFB /* ManagerBuddy.xcdatamodeld */; };
 		7BED1041240C2EFE00F8CEFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BED1040240C2EFE00F8CEFB /* Assets.xcassets */; };
@@ -39,7 +38,6 @@
 		7BED1031240C2EFB00F8CEFB /* ManagerBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManagerBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BED1034240C2EFB00F8CEFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BED1036240C2EFB00F8CEFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7BED1038240C2EFB00F8CEFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7BED103B240C2EFB00F8CEFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BED103E240C2EFB00F8CEFB /* ManagerBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ManagerBuddy.xcdatamodel; sourceTree = "<group>"; };
 		7BED1040240C2EFE00F8CEFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,12 +99,13 @@
 		7BED1033240C2EFB00F8CEFB /* ManagerBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				7BED1067240D53E600F8CEFB /* View */,
+				7BED1069240D541E00F8CEFB /* Controller */,
+				7BED1068240D53FB00F8CEFB /* ViewModel */,
+				7BED106A240D542D00F8CEFB /* Model */,
+				7BED1040240C2EFE00F8CEFB /* Assets.xcassets */,
 				7BED1034240C2EFB00F8CEFB /* AppDelegate.swift */,
 				7BED1036240C2EFB00F8CEFB /* SceneDelegate.swift */,
-				7BED1038240C2EFB00F8CEFB /* ViewController.swift */,
-				7BED103A240C2EFB00F8CEFB /* Main.storyboard */,
-				7BED1040240C2EFE00F8CEFB /* Assets.xcassets */,
-				7BED1042240C2EFE00F8CEFB /* LaunchScreen.storyboard */,
 				7BED1045240C2EFE00F8CEFB /* Info.plist */,
 				7BED103D240C2EFB00F8CEFB /* ManagerBuddy.xcdatamodeld */,
 			);
@@ -129,6 +128,36 @@
 				7BED105B240C2EFF00F8CEFB /* Info.plist */,
 			);
 			path = ManagerBuddyUITests;
+			sourceTree = "<group>";
+		};
+		7BED1067240D53E600F8CEFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7BED103A240C2EFB00F8CEFB /* Main.storyboard */,
+				7BED1042240C2EFE00F8CEFB /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7BED1068240D53FB00F8CEFB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7BED1069240D541E00F8CEFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7BED106A240D542D00F8CEFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +292,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BED103F240C2EFB00F8CEFB /* ManagerBuddy.xcdatamodeld in Sources */,
-				7BED1039240C2EFB00F8CEFB /* ViewController.swift in Sources */,
 				7BED1035240C2EFB00F8CEFB /* AppDelegate.swift in Sources */,
 				7BED1037240C2EFB00F8CEFB /* SceneDelegate.swift in Sources */,
 			);
