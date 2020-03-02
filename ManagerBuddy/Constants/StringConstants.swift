@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class StringConstants {
+
+    // MARK: - Constant Strings
+
+    static let empty: String = ""
+}

@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class ErrorConstants {
+
+    // MARK: - Constant Strings
+
+    static var urlMismatched: String = "URL is not correct"
+    static var tryAgain: String = "Something went wrong! Please try again!"
+}
