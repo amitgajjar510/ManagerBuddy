@@ -59,4 +59,73 @@ class DatabaseManager {
             }
         }
     }
+
+    // MARK: - CRUD Methods
+
+    func cleanUpEmployees() {
+        let managedObjectContext = persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "EmployeeEntity")
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        do {
+            try managedObjectContext.execute(batchDeleteRequest)
+        } catch let error as NSError {
+            print(error)
+        }
+
+        do {
+            try managedObjectContext.save()
+        }
+        catch let error {
+            print("Could not batch delete from core data: \(error.localizedDescription)")
+        }
+    }
+
+    func storeEmployees(withEmployees employees: [Employee]) {
+        let managedObjectContext = persistentContainer.viewContext
+        guard let entity: NSEntityDescription = NSEntityDescription.entity(forEntityName: "EmployeeEntity", in: managedObjectContext)
+            else {
+                return
+        }
+        for employee in employees {
+            let employeeEntity: EmployeeEntity = EmployeeEntity(entity: entity, insertInto: managedObjectContext)
+            employeeEntity.employeeId = employee.employeeId
+            employeeEntity.name = employee.name
+            employeeEntity.salary = employee.salary
+            employeeEntity.age = employee.age
+            employeeEntity.profileImage = employee.profileImage
+        }
+
+        do {
+            try managedObjectContext.save()
+        }
+        catch let error {
+            print("Could not save in core data: \(error.localizedDescription)")
+        }
+    }
+
+    func retriveEmployees() -> [EmployeeEntity] {
+        let managedObjectContext = persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<EmployeeEntity>(entityName: "EmployeeEntity")
+        let sortDescriptor1 = NSSortDescriptor(key: "employeeId", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor1]
+        var employeeEntities: [EmployeeEntity] = []
+        do {
+            employeeEntities = try managedObjectContext.fetch(fetchRequest)
+        } catch let error {
+            print(error)
+        }
+        return employeeEntities
+    }
+
+    func deleteEmployee(employeeEntity: EmployeeEntity) {
+        let managedObjectContext = persistentContainer.viewContext
+        managedObjectContext.delete(employeeEntity)
+
+        do {
+            try managedObjectContext.save()
+        }
+        catch let error {
+            print("Could not delete from core data: \(error.localizedDescription)")
+        }
+    }
 }

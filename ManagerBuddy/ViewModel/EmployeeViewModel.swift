@@ -11,15 +11,23 @@ import Foundation
 class EmployeeViewModel {
 
     // MARK: - Properties
-
-    var employees: [Employee] = []
+    var employeeEntities: [EmployeeEntity] = []
+    private let databaseManager: DatabaseManager = DatabaseManager.shared
     private lazy var employeeWebServiceManager: EmployeeWebServiceManager = EmployeeWebServiceManager()
 
     func showEmployees() {
         // Get employees from Database first
-
+        employeeEntities = databaseManager.retriveEmployees()
         // Call WebService Request
         fetchEmployees()
+    }
+}
+
+extension EmployeeViewModel {
+
+    func updateEmployeesAfterAPICall(withEmployees employees: [Employee]) {
+        databaseManager.cleanUpEmployees()
+        databaseManager.storeEmployees(withEmployees: employees)
     }
 }
 
@@ -40,7 +48,7 @@ extension EmployeeViewModel: WebServiceManagerDelegate {
                 errorReceived(withString: ErrorConstants.responseMismatched)
                 return
         }
-        self.employees = employees
+        updateEmployeesAfterAPICall(withEmployees: employees)
     }
 
     func errorReceived(withString errorString: String) {

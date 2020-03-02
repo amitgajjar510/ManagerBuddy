@@ -23,6 +23,8 @@
 		7BED1079240D612100F8CEFB /* EmployeeWebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED1078240D612100F8CEFB /* EmployeeWebServiceManager.swift */; };
 		7BED107B240D66F600F8CEFB /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED107A240D66F600F8CEFB /* Employee.swift */; };
 		7BED107D240D7D9900F8CEFB /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED107C240D7D9900F8CEFB /* EmployeeViewModel.swift */; };
+		7BED1080240D8A4C00F8CEFB /* EmployeeEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED107E240D8A4C00F8CEFB /* EmployeeEntity+CoreDataClass.swift */; };
+		7BED1081240D8A4C00F8CEFB /* EmployeeEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED107F240D8A4C00F8CEFB /* EmployeeEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		7BED1078240D612100F8CEFB /* EmployeeWebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeWebServiceManager.swift; sourceTree = "<group>"; };
 		7BED107A240D66F600F8CEFB /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		7BED107C240D7D9900F8CEFB /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
+		7BED107E240D8A4C00F8CEFB /* EmployeeEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmployeeEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7BED107F240D8A4C00F8CEFB /* EmployeeEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmployeeEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				7BED106C240D550F00F8CEFB /* DatabaseManager.swift */,
+				7BED107E240D8A4C00F8CEFB /* EmployeeEntity+CoreDataClass.swift */,
+				7BED107F240D8A4C00F8CEFB /* EmployeeEntity+CoreDataProperties.swift */,
 			);
 			path = DatabaseHandler;
 			sourceTree = "<group>";
@@ -345,10 +351,12 @@
 				7BED107B240D66F600F8CEFB /* Employee.swift in Sources */,
 				7BED1079240D612100F8CEFB /* EmployeeWebServiceManager.swift in Sources */,
 				7BED1073240D5CB200F8CEFB /* StringConstants.swift in Sources */,
+				7BED1080240D8A4C00F8CEFB /* EmployeeEntity+CoreDataClass.swift in Sources */,
 				7BED103F240C2EFB00F8CEFB /* ManagerBuddy.xcdatamodeld in Sources */,
 				7BED1077240D5CD800F8CEFB /* URLConstants.swift in Sources */,
 				7BED107D240D7D9900F8CEFB /* EmployeeViewModel.swift in Sources */,
 				7BED1035240C2EFB00F8CEFB /* AppDelegate.swift in Sources */,
+				7BED1081240D8A4C00F8CEFB /* EmployeeEntity+CoreDataProperties.swift in Sources */,
 				7BED1037240C2EFB00F8CEFB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
