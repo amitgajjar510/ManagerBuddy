@@ -38,7 +38,7 @@ class WebServiceManager {
                     return
                 }
                 self?.parseError(withString: ErrorConstants.tryAgain)
-            }
+            }.resume()
         default:
             break
         }
