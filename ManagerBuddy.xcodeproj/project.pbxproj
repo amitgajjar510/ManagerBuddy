@@ -16,6 +16,7 @@
 		7BED104F240C2EFF00F8CEFB /* ManagerBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED104E240C2EFF00F8CEFB /* ManagerBuddyTests.swift */; };
 		7BED105A240C2EFF00F8CEFB /* ManagerBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED1059240C2EFF00F8CEFB /* ManagerBuddyUITests.swift */; };
 		7BED106D240D550F00F8CEFB /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED106C240D550F00F8CEFB /* DatabaseManager.swift */; };
+		7BED1070240D586800F8CEFB /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED106F240D586800F8CEFB /* WebServiceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		7BED1059240C2EFF00F8CEFB /* ManagerBuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerBuddyUITests.swift; sourceTree = "<group>"; };
 		7BED105B240C2EFF00F8CEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BED106C240D550F00F8CEFB /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		7BED106F240D586800F8CEFB /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				7BED1068240D53FB00F8CEFB /* ViewModel */,
 				7BED106A240D542D00F8CEFB /* Model */,
 				7BED106B240D54E400F8CEFB /* DatabaseHandler */,
+				7BED106E240D584600F8CEFB /* WebServiceHandler */,
 				7BED1040240C2EFE00F8CEFB /* Assets.xcassets */,
 				7BED1034240C2EFB00F8CEFB /* AppDelegate.swift */,
 				7BED1036240C2EFB00F8CEFB /* SceneDelegate.swift */,
@@ -169,6 +172,14 @@
 				7BED106C240D550F00F8CEFB /* DatabaseManager.swift */,
 			);
 			path = DatabaseHandler;
+			sourceTree = "<group>";
+		};
+		7BED106E240D584600F8CEFB /* WebServiceHandler */ = {
+			isa = PBXGroup;
+			children = (
+				7BED106F240D586800F8CEFB /* WebServiceManager.swift */,
+			);
+			path = WebServiceHandler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BED1070240D586800F8CEFB /* WebServiceManager.swift in Sources */,
 				7BED106D240D550F00F8CEFB /* DatabaseManager.swift in Sources */,
 				7BED103F240C2EFB00F8CEFB /* ManagerBuddy.xcdatamodeld in Sources */,
 				7BED1035240C2EFB00F8CEFB /* AppDelegate.swift in Sources */,
