@@ -17,6 +17,9 @@
 		7BED105A240C2EFF00F8CEFB /* ManagerBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED1059240C2EFF00F8CEFB /* ManagerBuddyUITests.swift */; };
 		7BED106D240D550F00F8CEFB /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED106C240D550F00F8CEFB /* DatabaseManager.swift */; };
 		7BED1070240D586800F8CEFB /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED106F240D586800F8CEFB /* WebServiceManager.swift */; };
+		7BED1073240D5CB200F8CEFB /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED1072240D5CB200F8CEFB /* StringConstants.swift */; };
+		7BED1075240D5CC100F8CEFB /* ErrorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED1074240D5CC100F8CEFB /* ErrorConstants.swift */; };
+		7BED1077240D5CD800F8CEFB /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED1076240D5CD800F8CEFB /* URLConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		7BED105B240C2EFF00F8CEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BED106C240D550F00F8CEFB /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		7BED106F240D586800F8CEFB /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
+		7BED1072240D5CB200F8CEFB /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		7BED1074240D5CC100F8CEFB /* ErrorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorConstants.swift; sourceTree = "<group>"; };
+		7BED1076240D5CD800F8CEFB /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,7 @@
 				7BED106A240D542D00F8CEFB /* Model */,
 				7BED106B240D54E400F8CEFB /* DatabaseHandler */,
 				7BED106E240D584600F8CEFB /* WebServiceHandler */,
+				7BED1071240D5C9400F8CEFB /* Constants */,
 				7BED1040240C2EFE00F8CEFB /* Assets.xcassets */,
 				7BED1034240C2EFB00F8CEFB /* AppDelegate.swift */,
 				7BED1036240C2EFB00F8CEFB /* SceneDelegate.swift */,
@@ -180,6 +187,16 @@
 				7BED106F240D586800F8CEFB /* WebServiceManager.swift */,
 			);
 			path = WebServiceHandler;
+			sourceTree = "<group>";
+		};
+		7BED1071240D5C9400F8CEFB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7BED1072240D5CB200F8CEFB /* StringConstants.swift */,
+				7BED1074240D5CC100F8CEFB /* ErrorConstants.swift */,
+				7BED1076240D5CD800F8CEFB /* URLConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,7 +332,10 @@
 			files = (
 				7BED1070240D586800F8CEFB /* WebServiceManager.swift in Sources */,
 				7BED106D240D550F00F8CEFB /* DatabaseManager.swift in Sources */,
+				7BED1075240D5CC100F8CEFB /* ErrorConstants.swift in Sources */,
+				7BED1073240D5CB200F8CEFB /* StringConstants.swift in Sources */,
 				7BED103F240C2EFB00F8CEFB /* ManagerBuddy.xcdatamodeld in Sources */,
+				7BED1077240D5CD800F8CEFB /* URLConstants.swift in Sources */,
 				7BED1035240C2EFB00F8CEFB /* AppDelegate.swift in Sources */,
 				7BED1037240C2EFB00F8CEFB /* SceneDelegate.swift in Sources */,
 			);
